@@ -8,6 +8,8 @@
   <link rel="icon" href="favicon/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="favicon/152.svg">
   <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -30,12 +32,12 @@
           <a href="#" class="nav-link">Контакты</a>
         </li>
       </ul>
-      <a href="#" class="cart">Корзина</a>
+      <a href="#" class="cart nav-link">Корзина</a>
     </nav>
   </header>
   <main>
     <div class="container">
-      <h1 class="catalog-title">Магазин готовых шаблонов</h1>
+      <h1 class="catalog-title title">Магазин готовых шаблонов</h1>
       <section class="filter">
         <h2 class="visually-hiden">Фильтр товаров</h2>
         <form method="get" action="https://echo.htmlacademy.ru">
@@ -56,15 +58,15 @@
             <ul class="grid-list">
               <li class="grid-item">
                 <input type="radio" name="filter" id="filter-adaptive" value="adaptive" checked>
-                <label for="filter-adaptive">Адаптивная</label>
+                <label class="filter-title" for="filter-adaptive">Адаптивная</label>
               </li>
               <li class="grid-item">
                 <input type="radio" name="filter" id="filter-fixed" value="fixed">
-                <label for="filter-fixed">Фиксированна</label>
+                <label class="filter-title" for="filter-fixed">Фиксированна</label>
               </li>
               <li class="grid-item">
                 <input type="radio" name="filter" id="filter-rubber" value="rubber">
-                <label for="filter-rubber">Резиновая</label>
+                <label class="filter-title" for="filter-rubber">Резиновая</label>
               </li>
             </ul>
           </fieldset>
@@ -73,23 +75,23 @@
             <ul class="features-list">
               <li class="features-item">
                 <input type="checkbox" name="slider" id="filter-slider" checked>
-                <label for="filter-slider">Слайдер</label>
+                <label class="filter-title" for="filter-slider">Слайдер</label>
               </li>
               <li class="features-item">
                 <input type="checkbox" name="bloc-features" id="filter-bloc-features">
-                <label for="filter-slider">Блок преимуществ</label>
+                <label class="filter-title" for="filter-slider">Блок преимуществ</label>
               </li>
               <li class="features-item">
                 <input type="checkbox" name="news" id="filter-news" checked>
-                <label for="filter-news">Новости</label>
+                <label class="filter-title" for="filter-news">Новости</label>
               </li>
               <li class="features-item">
                 <input type="checkbox" name="gallery" id="filter-gallery">
-                <label for="filter-gallery">Галерея</label>
+                <label class="filter-title" for="filter-gallery">Галерея</label>
               </li>
               <li class="features-item">
                 <input type="checkbox" name="gallery" id="filter-basket">
-                <label for="filter-basket">Корзина</label>
+                <label class="filter-title" for="filter-basket">Корзина</label>
               </li>
             </ul>
           </fieldset>
@@ -102,13 +104,13 @@
           <legend>Сортировать:</legend>
           <ul class="sort-list">
             <li class="sort-item">
-              <button type="submit">По цене</button>
+              <a class="sort-button  sort-button-active">По цене</a>
             </li>
             <li class="sort-item">
-              <button type="submit">По типу</button>
+              <a class="sort-button">По типу</a>
             </li>
             <li class="sort-item">
-              <button type="submit">По названию</button>
+              <a class="sort-button">По названию</a>
             </li>
           </ul>
           <button>down</button>
@@ -116,6 +118,7 @@
         </fieldset>
         <ul class="catalog-list">
           <li class="catalog-item">
+            <img src="img/svg/browser.svg" alt="декоративная шапка картинки" width="360" height="40">
             <img src="img/catalog-list1.jpg" alt="Sedona" width="358" height="578">
             <div class="catalog-hover">
               <a href="#">
