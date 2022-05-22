@@ -42,7 +42,7 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: inherit;}
 /* переменные  */
 :root {
   --accent-color: #000;
-  --text-button-color: #fff;
+  --text-button-color: rgba(255, 255, 255, 1);;
   --carnation-color: #fb565a;
   --carnation-hover-color: #e74246;
   --carnation-clicking-color: #d7373b;
@@ -65,12 +65,12 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: inherit;}
 }
 
 body {
-  font-family: 'Roboto';
+  min-width: 1440px;
+  font-family: 'Roboto', "Arial", sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
   color: var(--small-text-color);
-
 }
 
 textarea {
@@ -85,6 +85,21 @@ legend {
   color: var(--accent-color);
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.visually-hidden {
+  position: absolute;
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0;
+  border: 0;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+}
+
 .title {
   font-weight: 500;
   font-size: 55px;
@@ -97,10 +112,22 @@ legend {
   font-size: 16px;
   line-height: 18px;
   text-transform: uppercase;
-  color: #FFFFFF;
+  color: var(--text-button-color);
 }
 
 /* header */
+
+.logo-img:hover {
+  fill-opacity: .7;
+}
+
+.logo-img:active {
+  fill-opacity: .3;
+}
+
+.main-header {
+  background-color: var(--gallery-color);
+}
 
 .nav-link {
   font-weight: 500;
@@ -109,7 +136,42 @@ legend {
   color: var(--accent-color);
 }
 
+.nav-link:hover {
+  color: var(--carnation-color);
+}
+
+.nav-link:active {
+  color: inherit;
+  opacity: 0.3;
+}
+
+.nav-link-active {
+  padding-bottom: 13px;
+  border-bottom: 2px solid var(--carnation-color);
+}
+
 /* promo */
+
+.promo-link {
+  display: inline-block;
+  padding: 17px 56px 15px 53px;
+  border-radius: 3px;
+  background-color: var(--carnation-color);
+}
+
+.promo-link:hover {
+  background-color: var(--carnation-hover-color);
+}
+
+.promo-link:active {
+  background: var(--carnation-clicking-color);
+  box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
+  color: rgba(255, 255, 255, .3);
+}
+
+.slide-item {
+  background-color: var(--gallery-color);
+}
 
 .services-title {
   font-weight: 700;
@@ -119,8 +181,65 @@ legend {
   color: var(--accent-color);
 }
 
+/* service */
+
+.services-link {
+  display: inline-block;
+  padding: 17px 40px 15px 39px;
+  border-radius: 3px;
+}
+
+.services-link-red {
+  background-color: var(--carnation-color);
+}
+
+.services-link-red:hover {
+  background: var(--carnation-hover-color);
+}
+
+.services-link-red:active {
+  background-color: var(--carnation-clicking-color);
+  box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
+  color: rgba(255, 255, 255, .3);
+}
+
+.services-link-green {
+  background-color: var(--green-color);
+}
+
+.services-link-green:hover {
+  background: var(--green-hover-color);
+}
+
+.services-link-green:active {
+  background-color: var(--green-clicking-color);
+  box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
+  color: rgba(255, 255, 255, .3);
+}
+
+.services-link-yellow {
+  background-color: var(--ronchi-color);
+}
+
+.services-link-yellow:hover {
+  background: var(--ronchi-hover-color);
+}
+
+.services-link-yellow:active {
+  background-color: var(--ronchi-clicking-color);
+  box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
+  color: rgba(255, 255, 255, .3);
+}
+
+.services-img {
+  background-color: var(--gallery-color);
+}
 
 /* about */
+
+.about-img {
+  background-color: var(--gallery-color);
+}
 
 .about-title {
   font-weight: 500;
@@ -155,6 +274,20 @@ legend {
   line-height: 18px;
 }
 
+/* customers */
+
+.customers-img {
+  opacity: .2;
+}
+
+.customers-img:hover {
+  opacity: 1;
+}
+
+.customers-img:active {
+  opacity: .1;
+}
+
 /* contacts */
 
 .contacts-title {
@@ -176,6 +309,30 @@ legend {
 }
 
 /* footer */
+
+
+.social-link {
+  display: block;
+  width: 81px;
+  height: 81px;
+  background-color:  var(--mercury-color);
+  border-radius: 50%;
+  /* text-align: center; */
+  /* padding-top: 30px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-link:hover {
+  background-color:  var(--carnation-hover-color);
+}
+
+.social-link:active {
+  background-color: var(--carnation-clicking-color);
+  fill-opacity: .2;
+}
+
 
 .footer-title {
   font-weight: 700;
@@ -229,20 +386,88 @@ textarea {
   text-transform: uppercase;
   color: var(--accent-color);
   opacity: 0.3;
+  cursor: pointer;
 }
 
-.sort-button-active {
+.sort-button:hover {
+  opacity: 0.6;
+}
+
+
+.sort-button-active,
+.sort-button:active {
   color: var(--accent-color);
   opacity: 1;
 }
 
 /* filter */
 
+.checkbox {
+  position: absolute;
+	z-index: -1;
+	opacity: 0;
+	display: block;
+	width: 0;
+	height: 0;
+}
+
+.checkbox+label::before {
+  content: '';
+  display: inline-block;
+  width: 23px;
+  height: 23px;
+  flex-shrink: 0;
+  flex-grow: 0;
+  border: 1px solid #adb5bd;
+  border-radius: 2px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
 .filter-title {
   line-height: 20px;
 }
 
+.features-link {
+  padding: 17px 89px 15px 88px;
+  color: var(--accent-color);
+  background-color: var(--gallery-color);
+  border-radius: 3px;
+}
+
+.features-link:hover {
+  background-color: var(--gallery-hover-color);
+}
+
+.features-link:active {
+  background-color: var(--gallery-clicking-color);
+  box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
+  color: rgba(255, 255, 255, .3);
+}
+
 /* catalog-list */
+
+.catalog-img {
+  /* background-color: var(--gallery-color); */
+  position: relative;
+  margin-top: 70px;
+}
+
+.catalog-img::before {
+  content:  url('../img/svg/browser.svg');
+  position: absolute;
+  top: 30px;
+  left: -1px;
+  width: 360px;
+  height: 40px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: .12;
+}
+
+.catalog-img:hover::before {
+  opacity: 1;
+}
 
 .catalog-hover {
   background-color: var(--gallery-color);
@@ -256,7 +481,15 @@ textarea {
   line-height: 30px;
   text-transform: uppercase;
   color: var(--accent-color);
+}
 
+.catalog-hover-title:hover {
+  color: var(--carnation-color);
+}
+
+.catalog-hover-title:active {
+  opacity: 0.3;
+  color: initial;
 }
 
 .catalog-hover-subtitle {
@@ -268,7 +501,15 @@ textarea {
   font-weight: 500;
   line-height: 18px;
   padding: 17px 72px 15px 72px;
-  background: var(--carnation-color);
+  background-color: var(--carnation-color);
   border-radius: 3px;
   color: var(--text-button-color);
+}
+
+.catalog-hover-btn:hover {
+  background-color: var(--carnation-hover-color);
+}
+
+.catalog-hover-btn:active {
+  background-color: var(--carnation-clicking-color);
 }
