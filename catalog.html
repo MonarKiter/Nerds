@@ -40,15 +40,14 @@
           <a href="#" class="nav-link">Контакты</a>
         </li>
       </ul>
-      <div class="cart-item">
-        <a href="#" class="cart nav-link">Корзина</a>
-      </div>
+      <a href="#" class="cart nav-link">Корзина</a>
     </nav>
   </header>
-  <main class="main container">
-    <section class="main-title">
-      <h1 class="catalog-title title">Магазин готовых шаблонов</h1>
+  <main class="main-catalog">
+    <section class="catalog-title container">
+      <h1 class="title">Магазин готовых шаблонов</h1>
     </section>
+    <div class="container products-grid">
     <section class="filter">
       <h2 class="visually-hidden">Фильтр товаров</h2>
       <form method="get" action="https://echo.htmlacademy.ru">
@@ -111,8 +110,8 @@
     </section>
     <section class="catalog">
       <h2 class="visually-hidden">Каталог товаров</h2>
-      <!-- <fieldset class="sort-container">
-        <legend>Сортировать:</legend>
+      <div class="sort-container">
+        <p class="sort-container-title">Сортировать:</p>
         <ul class="sort-list">
           <li class="sort-item">
             <a class="sort-button sort-button-active">По цене</a>
@@ -123,10 +122,14 @@
           <li class="sort-item">
             <a class="sort-button">По названию</a>
           </li>
+          <li class="sort-item">
+            <a href="#">в</a>
+          </li>
+          <li class="sort-item">
+            <a href="#">н</a>
+          </li>
         </ul>
-        <button>down</button>
-        <button>up</button>
-      </fieldset> -->
+      </div>
       <ul class="catalog-list">
         <li class="catalog-item">
           <picture class="catalog-img">
@@ -203,7 +206,7 @@
           </div>
         </li>
       </ul>
-      <!-- <ul class="paginator-list">
+      <ul class="paginator-list">
         <li>
           <a class="pagination-item active">1</a>
         </li>
@@ -216,8 +219,28 @@
         <li>
           <a class="pagination-item next-page" href="#">Следующая</a>
         </li>
-      </ul> -->
+      </ul>
     </section>
+  </div>
+  <section class="contacts">
+    <div class="container">
+      <h2 class="visually-hidden">Наши контакты</h2>
+      <ul class="contacts-list">
+        <li class="contacts-item">
+          <p class="contacts-title">Nёrds design studio</p>
+        </li>
+        <li class="contacts-item">
+          <p class="contacts-subtitle">наб. Реки Карповки,<br> 5 лит П, Санкт-Петербург</p>
+        </li>
+        <li class="contacts-item">
+          <a class="contacts-tel" href="tel:+78005558628">+7 800 555-86-28</a>
+        </li>
+        <li class="contacts-item">
+          <a href="#" class="contacts-link btn">Напишите нам</a>
+        </li>
+      </ul>
+    </div>
+  </section>
   </main>
   <footer class="main-footer container">
     <ul class="social-list">
