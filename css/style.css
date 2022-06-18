@@ -636,21 +636,80 @@ textarea {
   padding-bottom: 20px;
 }
 
-.price-grid {
-  /* width: 60px; */
+.range-filter {
+  width: 260px;
+
   /* display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 80px auto;
   row-gap: 14px; */
 }
 
-.price-range {
-  grid-column: 1 / -1;
-}
-
-.price-range {
+.range-controls {
+  position: relative;
+  height: 80px;
+  margin-bottom: 14px;
+  padding-top: 39px;
+  padding-left: 20px;
+  padding-right: 20px;
   background-color: var(--gallery-color);
   border-radius: 3px;
+
+}
+
+.range-controls .scale {
+  height: 2px;
+  background: var(--border-color);
+}
+
+.range-controls .bar {
+  width: 70%;
+  height: 2px;
+  background: var(--green-color);
+}
+
+.range-controls .toggle {
+  position: absolute;
+  top: 30px;
+  left: 0;
+  width: 4px;
+  height: 4px;
+  box-sizing: content-box;
+  border: 8px solid #FFFFFF;
+  background-color: #ABABAB;
+  border-radius: 50%;
+  box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+}
+
+.range-controls .toggle-min {
+  left: 18px;
+}
+
+.range-controls .toggle-max {
+  left: 160px;
+}
+
+.price-controls {
+  display: flex;
+  justify-content: space-between;
+}
+
+.price-controls label {
+  text-transform: uppercase;
+}
+
+.price-controls input {
+  width: 60px;
+  padding: 10px;
+  margin-left: 10px;
+  text-align: center;
+  color: var(--small-text-color);
+  border-radius: 5px;
+  background: var(--gallery-color);
+  box-sizing: content-box;
+  font-family: inherit;
+  font-size: inherit;
 }
 
 .grid-filter legend {
