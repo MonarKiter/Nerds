@@ -28,7 +28,7 @@
       </a>
       <ul class="nav-list">
         <li class="nav-item">
-          <a href="#" class="nav-link">Студия</a>
+          <a href="index.html" class="nav-link">Студия</a>
         </li>
         <li class="nav-item">
           <a href="#" class="nav-link">Клиенты</a>
@@ -40,7 +40,9 @@
           <a href="#" class="nav-link">Контакты</a>
         </li>
       </ul>
-      <a href="#" class="cart nav-link">Корзина</a>
+      <div class="cart-item">
+        <a href="#" class="cart nav-link">Корзина</a>
+      </div>
     </nav>
   </header>
   <main class="main-catalog">
@@ -51,56 +53,56 @@
       <section class="filter">
         <h2 class="visually-hidden">Фильтр товаров</h2>
         <form method="get" action="https://echo.htmlacademy.ru">
-          <fieldset>
+          <fieldset class="price">
             <legend>Стоимость:</legend>
-            <input type="range" name="priceslider" min="0" max="150000" step="1" data-values="0 100000" />
-            <p>
-              <label>От
-                <input type="text" name="price" value="0" />
-              </label>
-              <label>До
-                <input type="text" name="price" value="150000" />
-              </label>
-            </p>
+            <div class="price-grid">
+              <div class="price-range">
+                <input type="range" name="priceslider" min="0" max="150000" step="1" data-values="0 100000" />
+              </div>
+              <label>От<input type="text" name="price" value="0" /></label>
+              <label>До<input type="text" name="price" value="150000" /></label>
+            </div>
           </fieldset>
-          <fieldset>
+          <fieldset class="grid-filter">
             <legend>Сетка:</legend>
             <ul class="grid-list">
               <li class="grid-item">
-                <input type="radio" name="filter" id="filter-adaptive" value="adaptive" checked />
+                <input class="visually-hidden radio" type="radio" name="filter" id="filter-adaptive" value="adaptive"
+                  checked />
                 <label class="filter-title" for="filter-adaptive">Адаптивная</label>
               </li>
               <li class="grid-item">
-                <input type="radio" name="filter" id="filter-fixed" value="fixed" />
+                <input class="visually-hidden radio" type="radio" name="filter" id="filter-fixed" value="fixed" />
                 <label class="filter-title" for="filter-fixed">Фиксированна</label>
               </li>
               <li class="grid-item">
-                <input type="radio" name="filter" id="filter-rubber" value="rubber" />
+                <input class="visually-hidden radio" type="radio" name="filter" id="filter-rubber" value="rubber" />
                 <label class="filter-title" for="filter-rubber">Резиновая</label>
               </li>
             </ul>
           </fieldset>
-          <fieldset>
+          <fieldset class="features">
             <legend>Особенности:</legend>
             <ul class="features-list">
               <li class="features-item">
-                <input class="checkbox" type="checkbox" name="slider" id="filter-slider" checked />
+                <input class="checkbox visually-hidden" type="checkbox" name="slider" id="filter-slider" checked />
                 <label class="filter-title" for="filter-slider">Слайдер</label>
               </li>
               <li class="features-item">
-                <input class="checkbox" type="checkbox" name="bloc-features" id="filter-bloc-features" />
-                <label class="filter-title" for="filter-slider">Блок преимуществ</label>
+                <input class="checkbox visually-hidden" type="checkbox" name="bloc-features"
+                  id="filter-bloc-features" />
+                <label class="filter-title" for="filter-bloc-features">Блок преимуществ</label>
               </li>
               <li class="features-item">
-                <input class="checkbox" type="checkbox" name="news" id="filter-news" checked />
+                <input class="checkbox visually-hidden" type="checkbox" name="news" id="filter-news" checked />
                 <label class="filter-title" for="filter-news">Новости</label>
               </li>
               <li class="features-item">
-                <input class="checkbox" type="checkbox" name="gallery" id="filter-gallery" />
+                <input class="checkbox visually-hidden" type="checkbox" name="gallery" id="filter-gallery" />
                 <label class="filter-title" for="filter-gallery">Галерея</label>
               </li>
               <li class="features-item">
-                <input class="checkbox" type="checkbox" name="gallery" id="filter-basket" />
+                <input class="checkbox visually-hidden" type="checkbox" name="basket" id="filter-basket" />
                 <label class="filter-title" for="filter-basket">Корзина</label>
               </li>
             </ul>
@@ -122,12 +124,10 @@
             <li class="sort-item">
               <a class="sort-button">По названию</a>
             </li>
-            <li class="sort-item">
-              <a href="#">в</a>
-            </li>
-            <li class="sort-item">
-              <a href="#">н</a>
-            </li>
+            <div class="sort-arrow">
+                <a class="sort-down " href="#"></a>
+                <a class="sort-up sort-arrow-disable" href="#"></a>
+            </div>
           </ul>
         </div>
         <ul class="catalog-list">
@@ -215,17 +215,17 @@
           </li>
         </ul>
         <ul class="paginator-list">
-          <li>
-            <a class="pagination-item active">1</a>
+          <li class="pagination-item">
+            <a class="pagination-link active">1</a>
           </li>
-          <li>
-            <a class="pagination-item" href="#">2</a>
+          <li class="pagination-item">
+            <a class="pagination-link" href="#">2</a>
           </li>
-          <li>
-            <a class="pagination-item" href="#">3</a>
+          <li class="pagination-item">
+            <a class="pagination-link" href="#">3</a>
           </li>
-          <li>
-            <a class="pagination-item next-page" href="#">Следующая</a>
+          <li class="pagination-item">
+            <a class="pagination-link next-page" href="#">Следующая</a>
           </li>
         </ul>
       </section>
