@@ -327,6 +327,33 @@ img {
   margin-right: 60px;
 }
 
+.services-item {
+  width: 300px;
+}
+
+.services-img {
+  width: 300px;
+  height: 146px;
+}
+
+.services-img-1 {
+  background-image: url("../img/illustration-1.jpg");
+  background-repeat: no-repeat;
+  background-position: top;
+}
+
+.services-img-2 {
+  background-image: url("../img/illustration-2.jpg");
+  background-repeat: no-repeat;
+  background-position: top;
+}
+
+.services-img-3 {
+  background-image: url("../img/illustration-3.jpg");
+  background-repeat: no-repeat;
+  background-position: top;
+}
+
 .services-title {
   font-weight: 700;
   font-size: 24px;
@@ -408,7 +435,7 @@ img {
 .about-img {
   width: 360px;
   height: 208px;
-  background-color: var(--gallery-color);
+  background-image: url("../img/nerds-illustration.png");
   margin-bottom: 37px;
 }
 
@@ -605,13 +632,56 @@ th {
 
 .social-link {
   display: block;
+  position: relative;
   width: 81px;
   height: 81px;
   background-color:  var(--mercury-color);
   border-radius: 50%;
-  display: flex;
+  /* display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center; */
+}
+
+.social-link-vk::before {
+  content: '';
+  position: absolute;
+  width: 27px;
+  height: 15px;
+  top: 32px;
+  left: 27px;
+  background-image: url("../img/svg/vk-logo.svg");
+}
+
+.social-link-vk:active::before {
+  opacity: .3;
+}
+
+.social-link-fb::before {
+  content: '';
+  position: absolute;
+  width: 12px;
+  height: 22px;
+  top: 30px;
+  left: 34px;
+  background-image: url("../img/svg/fb-logo.svg");
+}
+
+.social-link-fb:active::before {
+  opacity: .3;
+}
+
+.social-link-ins::before {
+  content: '';
+  position: absolute;
+  width: 21px;
+  height: 21px;
+  top: 30px;
+  left: 29px;
+  background-image: url("../img/svg/instagram-logo.svg");
+}
+
+.social-link-ins:active::before {
+  opacity: .3;
 }
 
 .social-link:hover {
@@ -620,8 +690,8 @@ th {
 
 .social-link:active {
   background-color: var(--carnation-clicking-color);
-  fill-opacity: .2;
 }
+
 
 .footer-text {
   padding-left: 127px;
