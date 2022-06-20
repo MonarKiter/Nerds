@@ -40,7 +40,7 @@
           <a href="#" class="nav-link">Контакты</a>
         </li>
       </ul>
-      <div class="cart-item">
+      <div>
         <a href="#" class="cart nav-link">Корзина</a>
       </div>
     </nav>
@@ -62,11 +62,10 @@
                 </div>
                 <div class="toggle toggle-min" tabindex="0" style="left: 20%;"></div>
                 <div class="toggle toggle-max" tabindex="0" style="left: 50%;"></div>
-                <!-- <input type="range" name="priceslider" min="0" max="150000" step="1" data-values="0 100000" /> -->
               </div>
               <div class="price-controls">
-                <label class="min-price"> от <input type="number" name="min-price" value="0" /></label>
-                <label class="max-price"> до <input type="number" name="max-price" value="150000" /></label>
+                <label class="min-price"> от <input type="text" name="min-price" value="0" /></label>
+                <label class="max-price"> до <input type="text" name="max-price" value="150000" /></label>
               </div>
             </div>
           </fieldset>
@@ -80,7 +79,7 @@
               </li>
               <li class="grid-item">
                 <input class="visually-hidden radio" type="radio" name="filter" id="filter-fixed" value="fixed" />
-                <label class="filter-title" for="filter-fixed">Фиксированна</label>
+                <label class="filter-title" for="filter-fixed">Фиксированная</label>
               </li>
               <li class="grid-item">
                 <input class="visually-hidden radio" type="radio" name="filter" id="filter-rubber" value="rubber" />
@@ -290,6 +289,25 @@
       <p class="footer-subtitle">Скидка 10% для друзей из социальных сетей.</p>
     </div>
   </footer>
+  <section class="modal feedback">
+    <h2 class="feedback-title">Напишите нам</h2>
+    <form class="modal-form" action="https://echo.htmlacademy.ru" method="post">
+      <p>
+        <label class="feedback-subtitle" for="user-name">Ваше имя:</label>
+        <input class="user" id="user-name" type="text" name="name" placeholder="Имя Фамилия">
+      </p>
+      <p>
+        <label class="feedback-subtitle" for="user-mail">Ваше e-mail:</label>
+        <input class="user" id="user-mail" type="e-mail" name="mail" placeholder="e-mail@example">
+      </p>
+      <p>
+        <label class="feedback-subtitle" for="user-text">Текст письма:</label>
+        <textarea class="user-textarea" name="user-text" id="user-text" placeholder="В свободной форме"></textarea>
+      </p>
+      <button type="submit" class="modal-btn btn">Отправить</button>
+      <button class="modal-close" type="button" aria-label="Закрыть"></button>
+    </form>
+  </section>
 </body>
 
 </html>
