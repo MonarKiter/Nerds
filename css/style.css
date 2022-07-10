@@ -236,7 +236,7 @@ img {
 }
 
 .slide-text {
-  padding-bottom: 38px;
+  padding-bottom: 39px;
 }
 
 .slide {
@@ -249,33 +249,29 @@ img {
 
 .pagination {
   position: absolute;
-  bottom: 100px;
-  left: 540px;
+  bottom: 95px;
+  left: 537px;
   z-index: 20;
   display: flex;
-  width: 88px;
-  justify-content: space-between;
 }
 
 .pagination-button {
   width: 18px;
   height: 18px;
+  margin-right: 16px;
   background-color: var(--text-button-color);
   border-radius: 50%;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.pagination .current:after{
-  box-sizing: content-box;
-  position: absolute;
-  content: '';
-  top: 4px;
-  left: 4px;
-  width: 6px;
-  height: 6px;
-  color: transparent;
-  border: 2px solid #C1C1C1;
-  border-radius: 50%;
+.pagination .current::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  background-image: url("../img/svg/Ellipse.svg");
 }
 
 .promo-link {
@@ -297,19 +293,19 @@ img {
 
 .slide-item-1 {
   background-image: url("../img/nerds-index-slide1.png");
-  background-position: right;
+  background-position: 397px -9px;
   background-repeat: no-repeat;
 }
 
 .slide-item-2 {
   background-image: url("../img/nerds-index-slide2.png");
-  background-position: right;
+  background-position: 397px -9px;
   background-repeat: no-repeat;
 }
 
 .slide-item-3 {
   background-image: url("../img/nerds-index-slide3.png");
-  background-position: right;
+  background-position: 397px -9px;
   background-repeat: no-repeat;
 }
 
@@ -637,9 +633,6 @@ th {
   height: 81px;
   background-color:  var(--mercury-color);
   border-radius: 50%;
-  /* display: flex;
-  justify-content: center;
-  align-items: center; */
 }
 
 .social-link-vk::before {
@@ -885,7 +878,6 @@ th {
   padding-right: 20px;
   background-color: var(--gallery-color);
   border-radius: 3px;
-
 }
 
 .range-controls .scale {
@@ -995,32 +987,21 @@ th {
 }
 
 .features-list {
-  padding-bottom: 29px;
+  margin-bottom: 50px;
 }
 
 .features-item {
-  padding-bottom: 20px;
-  padding-left: 35px;
+  margin-bottom: 15px;
+  margin-left: 35px;
 }
 
 .features-item label {
   position: relative;
-  display: block;
   cursor: pointer;
   user-select: none;
 }
 
-.checkbox + label::before {
-  content: '';
-  position: absolute;
-  top: -2px;
-  left: -35px;
-  width: 23px;
-  height: 23px;
-  background-image: url("../img/svg/checkbox-off.svg");
-  opacity: 0.4;
-}
-
+.checkbox + label::before,
 .checkbox:checked + label::after {
   content: '';
   position: absolute;
@@ -1028,8 +1009,16 @@ th {
   left: -35px;
   width: 25px;
   height: 23px;
-  background-image: url("../img/svg/checkbox-on.svg");
   opacity: 0.4;
+}
+
+.checkbox + label::before {
+  background-image: url("../img/svg/checkbox-off.svg");
+  background-repeat: no-repeat;
+}
+
+.checkbox:checked + label::after {
+  background-image: url("../img/svg/checkbox-on.svg");
 }
 
 .checkbox:checked + label::before  {
@@ -1042,7 +1031,7 @@ th {
 }
 
 .features legend {
-  padding-bottom: 15px;
+  margin-bottom: 15px;
 }
 
 .filter-title {
@@ -1072,7 +1061,6 @@ th {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   column-gap: 42px;
-  /* column-gap: 40px;   */
   padding-top: 60px;
 }
 
@@ -1102,12 +1090,12 @@ th {
 .sort-container {
   display: flex;
   justify-content: space-between;
+  padding-bottom: 23px;
 }
 
 .sort-list {
   display: flex;
   flex-wrap: wrap;
-  padding-bottom: 20px;
 }
 
 .sort-item {
@@ -1273,8 +1261,8 @@ th {
 .paginator-list {
   display: flex;
   flex-wrap: wrap;
-  padding-top: 54px;
-  padding-bottom: 55px;
+  padding-top: 50px;
+  padding-bottom: 57px;
 }
 
 .pagination-link {
