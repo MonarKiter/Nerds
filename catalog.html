@@ -9,7 +9,7 @@
   <link rel="apple-touch-icon" href="favicon/152.svg" />
   <link rel="manifest" href="manifest.webmanifest" />
   <link rel="stylesheet" href="css/normalize.css" />
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/style.min.css" />
 </head>
 
 <body>
@@ -46,7 +46,7 @@
     </nav>
   </header>
   <main class="main-catalog">
-    <section class="catalog-title container">
+    <section class="catalog-title">
       <h1 class="title">Магазин готовых шаблонов</h1>
     </section>
     <div class="container products-grid">
@@ -130,13 +130,14 @@
             <li class="sort-item">
               <a class="sort-button">По названию</a>
             </li>
-            <div class="sort-arrow">
-              <a class="sort-down " href="#"></a>
-              <a class="sort-up sort-arrow-disable" href="#"></a>
-            </div>
           </ul>
+          <div class="sort-arrow">
+            <a class="sort-down " href="#"></a>
+            <a class="sort-up sort-arrow-disable" href="#"></a>
+          </div>
         </div>
         <ul class="catalog-list">
+
           <li class="catalog-item">
             <picture class="img-wrap">
               <img class="catalog-img" src="img/catalog-list1.jpg" alt="Sedona" width="360" height="578" />
@@ -145,7 +146,7 @@
               <a href="#">
                 <h3 class="catalog-hover-title">Sedona</h3>
               </a>
-              <p class="catalog-hover-subtitle">Информационный сайт для туристов </p>
+              <p class="catalog-hover-subtitle">Информационный сайт<br> для туристов </p>
               <button class="catalog-hover-btn">9 900 ₽</button>
             </div>
           </li>
@@ -230,6 +231,7 @@
           <li class="pagination-item">
             <a class="pagination-link" href="#">3</a>
           </li>
+
           <li class="pagination-item">
             <a class="pagination-link next-page" href="#">Следующая</a>
           </li>
