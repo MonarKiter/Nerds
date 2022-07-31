@@ -599,7 +599,6 @@ th {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
   flex-wrap: wrap
 }
 
@@ -618,15 +617,8 @@ th {
 }
 
 .customers-link {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center;
   margin: 0 auto
 }
@@ -808,15 +800,15 @@ th {
   -webkit-box-shadow: 0 20px 40px rgba(0,0,0,.4);
   box-shadow: 0 20px 40px rgba(0,0,0,.4);
   position: fixed;
-  top: 150px;
-  left: 500px;
+  top: 160px;
+  left: 470px;
   overflow: hidden;
   overflow-y: auto;
-  z-index: 99;
-  display: none
+  z-index: 99
 }
 
 .modal p,.modal-form {
+  margin: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex
@@ -843,10 +835,11 @@ th {
 }
 
 .feedback-title {
+  margin: 0;
   position: relative;
   font-size: 45px;
   line-height: 53px;
-  padding-bottom: 37px
+  padding: 0 0 37px
 }
 
 .feedback-subtitle {
@@ -902,7 +895,7 @@ th {
   background: var(--text-button-color);
   border: 2px solid var(--border-color);
   border-radius: 3px;
-  margin-bottom: 47px;
+  margin-bottom: 45px;
   padding: 16px
 }
 
@@ -932,6 +925,7 @@ th {
 }
 
 .modal-btn {
+  border: 0;
   display: inline-block;
   padding: 17px 83px 15px;
   border-radius: 3px;
@@ -947,6 +941,7 @@ th {
 }
 
 .modal-close {
+  border: 0;
   position: absolute;
   top: 78px;
   right: 90px;
@@ -1319,7 +1314,7 @@ th {
   content: url(../img/svg/browser.svg);
   position: absolute;
   top: -39px;
-  left: 0;
+  left: -1px;
   width: 100%;
   height: 40px;
   background-size: contain;
@@ -1329,11 +1324,11 @@ th {
 }
 
 .catalog-hover,.catalog-img {
-  width: 360px;
   border-radius: 0 0 6px 6px
 }
 
 .catalog-img {
+  width: 360px;
   -o-object-fit: contain;
   object-fit: contain
 }
@@ -1356,13 +1351,14 @@ th {
   -ms-flex-align: center;
   align-items: center;
   -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
   background-color: var(--gallery-color);
   min-height: 231px;
   position: absolute;
   bottom: 0;
   left: 0;
+  width: 358px;
   z-index: -1
 }
 
@@ -1424,7 +1420,7 @@ th {
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  padding: 50px 0 50px
+  padding: 50px 0
 }
 
 .pagination-link {
