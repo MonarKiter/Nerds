@@ -661,12 +661,19 @@ th {
 }
 
 .contacts {
-    background-image: url(../img/map-with-maker.jpg);
+    /* background-image: url(../img/map-with-maker.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: center; */
     padding-top: 55px;
-    padding-bottom: 50px
+    padding-bottom: 364px;
+    position: relative;
+}
+
+.yandex-map {
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .contacts-list {
@@ -674,7 +681,10 @@ th {
     margin: 0;
     display: inline-block;
     background-color: var(--text-button-color);
-    padding: 50px
+    padding: 50px;
+    position: absolute;
+    top: 57px;
+    left: 374px
 }
 
 .contacts-title {
